@@ -68,7 +68,7 @@ export const Login = async (req, res) => {
             text: `Your OTP is: ${otp}. It will expire in 60 minutes.`
         };
 
-        // await transporter.sendMail(mailOptions);
+        await transporter.sendMail(mailOptions);
         res.status(200).json({ success: true, msg: `OTP sent to your email: ${id}` });
     } catch (error) {
         res.status(500).json({ success: false, msg: "Internal server error" });
