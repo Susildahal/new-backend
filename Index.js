@@ -51,5 +51,5 @@ Connectmongodb()
         });
     })
     .catch((err) => {
-        console.error("Failed to start server due to DB connection error:", err);
+        console.error("Failed to start server due to DB connection because  error:", err);
     });
