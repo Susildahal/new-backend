@@ -64,7 +64,7 @@ export const Login = async (req, res) => {
         const mailOptions = {
             from: process.env.SMPT_EMAIL,
             to: id, // assuming id is email
-            subject: "Your OTP Code",
+            subject: "Your OTP Code sdklnf,smdfmsdfnsdnfmdsm",
             text: `Your OTP is: ${otp}. It will expire in 60 minutes.`
         };
 
