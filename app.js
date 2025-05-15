@@ -20,7 +20,7 @@ app.use(express.json());
 
 // CORS with credentials
 const corsOptions = {
-    origin: "http://localhost:3000",
+    origin: "https://fabulous-malasada-a44aa9.netlify.app/",
     credentials: true,
 };
 app.use(cors(corsOptions));
