@@ -115,8 +115,8 @@ export const checkotptologin = async (req, res) => {
 
         res.cookie("authToken", token, {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "development",
-            sameSite: process.env.NODE_ENV === "development" ? "Strict" : "Lax",
+            secure: true,
+            sameSite: "None",
             maxAge: 60 * 60 * 1000, // 1 hour
         });
 
@@ -135,8 +135,8 @@ export const logout = async (req, res) => {
 
         res.cookie("authToken", "", {
             httpOnly: true,
-            secure: process.env.NODE_ENV === "development",
-            sameSite: process.env.NODE_ENV === "development" ? "Strict" : "Lax",
+            secure: true,
+            sameSite: "None",
             expires: new Date(0),
             path: "/"
         });
